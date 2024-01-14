@@ -1,4 +1,7 @@
 import "package:flutter/material.dart";
+import "package:flutter_application_test/shared/menu_bottom.dart";
+import "package:flutter_application_test/shared/menu_drawer.dart";
+import "package:flutter_application_test/shared/navbar.dart";
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -6,13 +9,12 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'GloboApp',
-          style: TextStyle(color: Colors.white70),
-        ),
-        backgroundColor: Colors.teal,
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: Navbar(),
       ),
+      drawer: const MenuDrawer(),
+      bottomNavigationBar: const MenuBottom(),
       body: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
