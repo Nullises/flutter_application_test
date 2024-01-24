@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 import "package:flutter_application_test/screens/bmi.dart";
 import "package:flutter_application_test/screens/home.dart";
+import "package:flutter_application_test/screens/sessions_screen.dart";
+import "package:flutter_application_test/screens/weather.dart";
 
 class MenuDrawer extends StatelessWidget {
   const MenuDrawer({super.key});
@@ -22,7 +24,7 @@ class MenuDrawer extends StatelessWidget {
         color: Colors.teal,
       ),
       child: Text(
-        'Globo App',
+        'Fitness Lifestyle',
         style: TextStyle(color: Colors.white70, fontSize: 24),
       ),
     ));
@@ -40,6 +42,10 @@ class MenuDrawer extends StatelessWidget {
               break;
             case 'BMI':
               screen = const Bmi();
+            case 'Weather':
+              screen = const Weather();
+            case 'Training':
+              screen = const SessionsScreen();
             default:
           }
           Navigator.of(context).pop();

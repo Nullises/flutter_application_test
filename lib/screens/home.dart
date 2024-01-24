@@ -11,7 +11,9 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
-        child: Navbar(),
+        child: Navbar(
+          title: '',
+        ),
       ),
       drawer: const MenuDrawer(),
       bottomNavigationBar: const MenuBottom(),
@@ -26,7 +28,7 @@ class Home extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       color: Colors.white70),
                   child: const Text(
-                    'OLA K ASE',
+                    'Fitness App',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 24, shadows: [
                       Shadow(
